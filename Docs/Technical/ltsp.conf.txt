@@ -1,0 +1,15 @@
+ltsp.conf always resides in /var/lib/tftboot/ltsp/i386 even if the client boots to amd64
+
+cat /var/lib/tftpboot/ltsp/i386/lts.conf
+# Global defaults for all clients
+# if you refer to the local server, just use the
+# "server" keyword as value
+# see lts_parameters.txt for valid values
+################
+[default]
+    LOCALDEV=True
+    SOUND=True
+    NBD_SWAP=True
+    SYSLOG_HOST=server
+    XKBLAYOUT=ch
+    LDM_SESSION="Lubuntu.desktop"
